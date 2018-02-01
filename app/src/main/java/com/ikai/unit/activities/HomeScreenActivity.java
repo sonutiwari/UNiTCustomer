@@ -1,4 +1,4 @@
-package com.ikai.unit.activity;
+package com.ikai.unit.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -36,9 +36,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.ikai.unit.adapter.NavDrawerItemsAdapter;
-import com.ikai.unit.dataModel.NavDrawerItem;
-import com.ikai.unit.popup.ErrorMessageDialogue;
+import com.ikai.unit.adapters.NavDrawerItemsAdapter;
+import com.ikai.unit.dataModels.NavDrawerItem;
+import com.ikai.unit.popUps.ErrorMessageDialogue;
 import com.ikai.unit.R;
 import com.ikai.unit.listeners.RecyclerItemClickListener;
 

@@ -1,4 +1,4 @@
-package com.ikai.unit.activity;
+package com.ikai.unit.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

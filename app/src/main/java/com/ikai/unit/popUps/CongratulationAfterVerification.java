@@ -1,4 +1,4 @@
-package com.ikai.unit.popup;
+package com.ikai.unit.popUps;
 
 import android.app.Dialog;
 import android.app.DialogFragment;

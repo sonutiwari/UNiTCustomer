@@ -1,4 +1,4 @@
-package com.ikai.unit.activity;
+package com.ikai.unit.activities;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -23,9 +23,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.ikai.unit.popup.CongratulationAfterVerification;
-import com.ikai.unit.dataModel.CustomerProgress;
-import com.ikai.unit.popup.ErrorMessageDialogue;
+import com.ikai.unit.popUps.CongratulationAfterVerification;
+import com.ikai.unit.dataModels.CustomerProgress;
+import com.ikai.unit.popUps.ErrorMessageDialogue;
 import com.ikai.unit.R;
 
 import java.text.SimpleDateFormat;

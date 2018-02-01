@@ -23,7 +23,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activity.SplashAndRegisterActivity"
+            android:name=".activities.SplashAndRegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -33,10 +33,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.HomeScreenActivity"
+            android:name=".activities.HomeScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HomeScreenTheme" />
-        <activity android:name=".activity.ProfileEditorActivity"></activity>
+        <activity android:name=".activities.ProfileEditorActivity"></activity>
     </application>
 
 </manifest>
