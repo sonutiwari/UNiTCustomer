@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#33ebff</color>
+    <color name="colorPrimaryDark">#00e5ff</color>
+    <color name="colorAccent">#f9734a</color>
+
+    <!--Main screen colors-->
+    <color name="main_screen_background_color">#d9d4d4</color>
+    <color name="transparent_category_text">#92ff6666</color>
+    <color name="grey">#6b6969</color>
+
+    <color name="transparent">#eeeeee</color>
+
+    <color name="description_box_border">#eeeeee</color>
+    <color name="loading_background">#6e1d1d1d</color>
+    <color name="shade_color">#6e1d1d1d</color>
+    <color name="dot_indicator_back">#28161616</color>
+
+    <color name="action_icon_background_on_shop_image">#8b161616</color>
+
+    <color name="veg_color">#3ed22d</color>
+    <color name="non_veg_color">#c22c2c</color>
+
+    <color name="error_color">#ff3232</color>
+
+    <color name="white">#ffffff</color>
+</resources>

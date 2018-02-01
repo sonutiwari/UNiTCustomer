@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="logo_size">260dp</dimen>
+    <dimen name="register_or_welcome_card_width">320dp</dimen>
+    <dimen name="wishing_clip_image">50dp</dimen>
+    <dimen name="welcome_size">28sp</dimen>
+    <dimen name="register_form_icon_size">30dp</dimen>
+    <dimen name="register_form_edit_text_width">150dp</dimen>
+    <dimen name="welcome_padding_top">50dp</dimen>
+    <dimen name="cat_button_radius">20dip</dimen>
+    <dimen name="cat_button_stroke_width">2dip</dimen>
+    <dimen name="bottom_nav_height">52dp</dimen>
+    <dimen name="bottom_nav_icon_size">28dp</dimen>
+
+    <!--Navigation drawer settings-->
+    <dimen name="drawer_profile_photo_size">100dp</dimen>
+    <dimen name="nav_draw_list_item_height">56dp</dimen>
+    <dimen name="nav_draw_list_item_icon_size">24dp</dimen>
+
+    <!--Account details dimensions-->
+    <dimen name="edit_icon_size">24dp</dimen>
+
+    <!--Home's Main screen dimensions-->
+    <dimen name="emergency_contents_icon_size">60dp</dimen>
+    <dimen name="shop_image_slider_height">220dp</dimen>
+    <dimen name="shop_owner_image_size">115dp</dimen>
+    <dimen name="top_margin_for_order_or_image_slider">73dp</dimen>
+
+    <!--Tab in home screen fragment dimensions-->
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+
+</resources>
