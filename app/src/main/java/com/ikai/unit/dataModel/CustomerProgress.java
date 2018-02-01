@@ -1,4 +1,4 @@
-package com.ikai.unit.DataModel;
+package com.ikai.unit.dataModel;
 
 /**
  * Created by shiv on 25/1/18.

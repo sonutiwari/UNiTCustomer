@@ -1,4 +1,4 @@
-package com.ikai.unit.Adapter;
+package com.ikai.unit.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ikai.unit.DataModel.NavDrawerItem;
+import com.ikai.unit.dataModel.NavDrawerItem;
 import com.ikai.unit.R;
 
 import java.util.List;

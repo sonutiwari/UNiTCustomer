@@ -24,7 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ikai.unit.popup.CongratulationAfterVerification;
-import com.ikai.unit.DataModel.CustomerProgress;
+import com.ikai.unit.dataModel.CustomerProgress;
 import com.ikai.unit.popup.ErrorMessageDialogue;
 import com.ikai.unit.R;
 
