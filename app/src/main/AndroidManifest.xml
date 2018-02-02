@@ -36,7 +36,23 @@
             android:name=".activities.HomeScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HomeScreenTheme" />
-        <activity android:name=".activities.ProfileEditorActivity"></activity>
+        <activity android:name=".activities.ProfileEditorActivity" />
+        <activity android:name=".activities.TermsAndConditionActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.ShoppingBagActivity" />
+        <activity android:name=".activities.TrialActivity" />
+        <activity android:name=".activities.WishListActivity" />
+        <activity android:name=".activities.OrderDetailsActivity" />
+        <activity android:name=".activities.FavoriteStoresActivity" />
+        <activity android:name=".activities.ConsumerProfileActivity" />
+        <activity android:name=".activities.CategoryActivity" />
+        <activity android:name=".activities.MembershipActivity" />
+        <activity android:name=".activities.MembershipDetailsActivity" />
+        <activity android:name=".activities.IssueActivity" />
+        <activity android:name=".activities.CustomerCareActivity" />
+        <activity android:name=".activities.AboutUsActivity" />
+        <activity android:name=".activities.PaperOrderDigitalActivity" />
+        <activity android:name=".activities.PaperOrderCardActivity"></activity>
     </application>
 
 </manifest>

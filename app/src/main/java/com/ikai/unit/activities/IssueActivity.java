@@ -1,8 +1,11 @@
 package com.ikai.unit.activities;
 
+
 /**
- * @Description: This feature will help user update his profile. it will be invoked when
- * user will click on his photo in drawer
+ * @Description: This class will be called when customer want
+ * to generate an issue regarding the product he she bought
+ * earlier. this activity will be invoked from order details
+ * or cart activity.
  *
  *
  *  @Author:
@@ -18,11 +21,11 @@ import android.os.Bundle;
 
 import com.ikai.unit.R;
 
-public class ProfileEditorActivity extends AppCompatActivity {
+public class IssueActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_editor);
+        setContentView(R.layout.activity_issue);
     }
 }

@@ -1,8 +1,8 @@
 package com.ikai.unit.activities;
 
 /**
- * @Description: This feature will help user update his profile. it will be invoked when
- * user will click on his photo in drawer
+ * @Description: will show options for custome care such as call, sms,
+ * phone as per given layout
  *
  *
  *  @Author:
@@ -18,11 +18,11 @@ import android.os.Bundle;
 
 import com.ikai.unit.R;
 
-public class ProfileEditorActivity extends AppCompatActivity {
+public class CustomerCareActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_editor);
+        setContentView(R.layout.activity_customer_care);
     }
 }

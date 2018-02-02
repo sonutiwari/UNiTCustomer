@@ -1,8 +1,9 @@
 package com.ikai.unit.activities;
 
+
 /**
- * @Description: This feature will help user update his profile. it will be invoked when
- * user will click on his photo in drawer
+ * @Description: If user want to see his current membership details then
+ * he should go into this activity. see layout for other details.
  *
  *
  *  @Author:
@@ -18,11 +19,11 @@ import android.os.Bundle;
 
 import com.ikai.unit.R;
 
-public class ProfileEditorActivity extends AppCompatActivity {
+public class MembershipDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_editor);
+        setContentView(R.layout.activity_membership_details);
     }
 }

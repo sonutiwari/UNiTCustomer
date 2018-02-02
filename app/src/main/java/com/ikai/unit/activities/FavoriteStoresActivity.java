@@ -1,8 +1,9 @@
 package com.ikai.unit.activities;
 
+
 /**
- * @Description: This feature will help user update his profile. it will be invoked when
- * user will click on his photo in drawer
+ * @Description: will show all new things arrived at favourite stores
+ * market trendings among them according to given layout
  *
  *
  *  @Author:
@@ -18,11 +19,11 @@ import android.os.Bundle;
 
 import com.ikai.unit.R;
 
-public class ProfileEditorActivity extends AppCompatActivity {
+public class FavoriteStoresActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_editor);
+        setContentView(R.layout.activity_favorite_stores);
     }
 }
