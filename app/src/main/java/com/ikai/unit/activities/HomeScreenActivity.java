@@ -15,6 +15,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -37,6 +38,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ikai.unit.adapters.NavDrawerItemsAdapter;
+import com.ikai.unit.adapters.StoreRecyclerViewAdapter;
 import com.ikai.unit.dataModels.NavDrawerItem;
 import com.ikai.unit.popUps.ErrorMessageDialogue;
 import com.ikai.unit.R;
@@ -50,7 +52,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import static com.ikai.unit.utilities.Constants.DRAWER_ITEM_ICONS_IDS;
 import static com.ikai.unit.utilities.Constants.DRAWER_ITEM_NAMES;
 
-public class HomeScreenActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeScreenActivity extends AppCompatActivity  implements  View.OnClickListener {
+
 
     private NavDrawerItemsAdapter navDrawerItemsAdapter;
     private List<NavDrawerItem> navDrawerItemList = new ArrayList<>();
@@ -156,7 +159,7 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
                         public void onItemClick(View view, int position, int recyclerViewId) {
                             // Close the drawer.
                             mDrawerLayout.closeDrawer(GravityCompat.START);
-                            /**
+                            /*
                              * Todo 1. handle different item click and launch respective activity.
                              */
                             // Handle different click and open activity related to that
@@ -492,4 +495,7 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
             startActivity(intent);
         }
     }
+
+
+
 }

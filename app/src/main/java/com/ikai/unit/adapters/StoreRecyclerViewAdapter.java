@@ -1,0 +1,89 @@
+package com.ikai.unit.adapters;
+
+/**
+ *
+ * @Description:  This class will adapt custom
+ *              {@link android.support.v7.widget.RecyclerView}
+ *              to adapt all elements of stores given in layout
+ * @Author: Sonu Tiwari(ankorha@gmail.com)
+ *
+ * @StartingDate: 05/02/2018
+ * @EndingDate:
+ *
+ * @Copyright UNiT (An IKAI company product)
+ */
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.ikai.unit.R;
+import com.ikai.unit.activities.HomeScreenActivity;
+
+public class StoreRecyclerViewAdapter extends
+        RecyclerView.Adapter<StoreRecyclerViewAdapter.ViewHolder> {
+
+    private String[] mData = new String[0];
+    private LayoutInflater mInflater;
+
+    // Data is passed into the constructor
+    public StoreRecyclerViewAdapter(Context context, String[] data) {
+        this.mInflater = LayoutInflater.from(context);
+        this.mData = data;
+    }
+
+    // Inflates the cell layout from xml when needed
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = mInflater.inflate(R.layout.stores_grid_structure, parent, false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
+    }
+
+    // Binds the data to the textview in each cell
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        String animal = mData[position];
+        holder.StoreTextView.setText(animal);
+    }
+
+    // Total number of cells
+    @Override
+    public int getItemCount() {
+        return mData.length;
+    }
+
+
+
+    // Stores and recycles views as they are scrolled off screen
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public TextView StoreTextView;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            StoreTextView = (TextView) itemView.findViewById(R.id.info_text);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            onItemClick(view, getAdapterPosition());
+        }
+    }
+
+    // Convenience method for getting data at click position
+    public String getItem(int id) {
+        return mData[id];
+    }
+
+    // Method that executes your code for the action received
+    public void onItemClick(View view, int position) {
+        Log.i("TAG", "You clicked number " +
+                getItem(position).toString() +
+                ", which is at cell position " +
+                position);
+    }
+}
