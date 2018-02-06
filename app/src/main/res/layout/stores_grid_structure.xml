@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:padding="5dp"
     android:layout_width="120dp"
     android:layout_height="120dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/shop_img"
+            android:src="@drawable/ic_mic_active"
+            android:id="@+id/shop_thumbnail"
+            android:elevation="3dp"
+            tools:ignore="UnusedAttribute" />
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="bottom"
+            android:textAlignment="center"
+            android:layout_below="@id/shop_thumbnail"
+            android:background="@color/colorAccent"
+            android:text="@string/app_name"/>
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/info_text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="@color/colorAccent"/>
 
-</LinearLayout>
+</android.support.v7.widget.CardView>

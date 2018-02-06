@@ -4,11 +4,16 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.ikai.unit.R;
+import com.ikai.unit.adapters.StoreRecyclerViewAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,7 +36,10 @@ import com.ikai.unit.R;
  * @Copyright UNiT (An IKAI company product)
  *
  */
-public class StoresFragment extends Fragment {
+public class StoresFragment extends Fragment implements
+        StoreRecyclerViewAdapter.ItemClickListener{
+
+    StoreRecyclerViewAdapter adapter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -77,7 +85,23 @@ public class StoresFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+
+        //dummmy data
+        int[] imageIds = {R.drawable.ic_logo,R.drawable.ic_logo,
+                R.drawable.ic_logo,R.drawable.ic_logo,R.drawable.ic_logo,R.drawable.ic_logo,
+                R.drawable.ic_logo,R.drawable.ic_logo,R.drawable.ic_logo,R.drawable.ic_logo};
+
+        String[] storesName = {"UNiT","UNiT","UNiT","UNiT",
+                "UNiT","UNiT","UNiT","UNiT",
+                "UNiT","UNiT"};
+                // Inflate the layout for this fragment
+        RecyclerView recyclerView = new RecyclerView(getContext());
+        int numOfColumns = 3;
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), numOfColumns));
+        adapter = new StoreRecyclerViewAdapter(this.getContext(), storesName, imageIds);
+        adapter.setClickListener(this);
+        recyclerView.setAdapter(adapter);
         return inflater.inflate(R.layout.fragment_stores, container, false);
     }
 
@@ -105,6 +129,14 @@ public class StoresFragment extends Fragment {
         mListener = null;
     }
 
+
+
+    @Override
+    public void onItemClick(View view, int position) {
+        Log.i("TAG", "You clicked number " + adapter.getItem(position) +
+                ", which is at cell position " + position);
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -119,4 +151,6 @@ public class StoresFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }
