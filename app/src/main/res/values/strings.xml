@@ -32,5 +32,6 @@
     <string name="app_icon">App Icon</string>
     <string name="search_your_products">Search your Products</string>
     <string name="shop_img">thumbnail of shop Image</string>
+    <string name="favorite_image">Favorite Image</string>
 
 </resources>

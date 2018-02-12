@@ -5,15 +5,25 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.ikai.unit.R;
+import com.ikai.unit.dataModels.StoreDataModel;
+
+import java.util.List;
 
 /**
  *
  * @Description:  This class will adapt custom
  *              {@link android.support.v7.widget.RecyclerView}
  *              to adapt all elements of stores given in layout
+ *              {@link StoreRecyclerViewAdapter} is an
+ *              {@link ArrayAdapter} that can provide the layout for each list
+ *              based on a data source, which is a list of
+ *              {@link com.ikai.unit.dataModels.StoreDataModel} objects.
  * @Author: Sonu Tiwari(ankorha@gmail.com)
  *
  * @StartingDate: 05/02/2018
@@ -24,17 +34,18 @@ import com.ikai.unit.R;
 
 public class StoreRecyclerViewAdapter extends
         RecyclerView.Adapter<StoreRecyclerViewAdapter.ViewHolder>{
-    private int[] imagesResourceId = new int[0];
-    private String[] storesName = new String[0];
+    private List<StoreDataModel> storeDataModels;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
+    private Context context;
 
-    public StoreRecyclerViewAdapter(Context context, String[] data, int[] id) {
-        this.mInflater = LayoutInflater.from(context);
-        this.storesName = data;
-        this.imagesResourceId = id;
+    /**
+     * @param context
+     * @param storeDataModels List of StoreDataModel Objects to show in recyclerview
+     */
+    public StoreRecyclerViewAdapter(Context context, List<StoreDataModel> storeDataModels){
+        this.storeDataModels = storeDataModels;
     }
-
 
     @Override
     public StoreRecyclerViewAdapter.ViewHolder
@@ -46,15 +57,21 @@ public class StoreRecyclerViewAdapter extends
 
     @Override
     public void onBindViewHolder
-            (ViewHolder holder, int position) {
-        String storeName = storesName[position];
-        int imageResourceId = imagesResourceId[position];
+           (ViewHolder holder, int position) {
+        //super.onBindViewHolder(holder, position);
+        StoreDataModel sdmInstance = storeDataModels.get(position);
+        String storeName = sdmInstance.getStoreName();
+        String thumbnailURL = sdmInstance.getStoreThumbnailImage();
+        boolean favorite = sdmInstance.isFavoriteShop();
         holder.storeCardTextView.setText(storeName);
-        holder.storeCardImageView.setImageResource(imageResourceId);
+        ImageView imageView = holder.storeCardImageView;
+        Glide.with(this.context)
+                .load(thumbnailURL)
+                .into(imageView);
     }
     @Override
     public int getItemCount() {
-        return storesName.length;
+        return storeDataModels.size();
     }
 
 
@@ -82,8 +99,8 @@ public class StoreRecyclerViewAdapter extends
     }
 
     // convenience method for getting data at click position
-    public String getItem(int id) {
-        return storesName[id];
+    public StoreDataModel getItem(int id) {
+        return storeDataModels.get(id);
     }
 
     // allows clicks events to be caught
@@ -95,4 +112,5 @@ public class StoreRecyclerViewAdapter extends
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
+
 }
